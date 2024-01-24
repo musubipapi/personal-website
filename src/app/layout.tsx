@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${abhayaLibre.variable}`}>
-      <body>{children}</body>
+      <body className="dark:bg-[#282C34]">{children}</body>
     </html>
   );
 }

@@ -1,3 +1,4 @@
+import Name from "@/components/Name";
 import {
   Tooltip,
   TooltipContent,
@@ -17,17 +18,23 @@ export default function Home() {
   return (
     <main className="container mx-auto lg:px-0 px-4 max-w-3xl font-serif">
       <div>
-        <p className="mt-8 text-4xl">Andy Gao.</p>
+        <div className="mt-8 text-4xl flex">
+          Andy Ga
+          <div className="mt-[13.2px] ml-[0.75px]">
+            <Name />
+          </div>
+          .
+        </div>
         <p className="text-lg">
           Welcome to my corner of the internet. Help yourself to a{" "}
-          <span className="text-orange-900 hover:font-extrabold cursor-pointer">
+          <span className="text-orange-900 hover:font-extrabold cursor-pointer dark:text-orange-400">
             coffee.
           </span>
         </p>
         <p className="text-lg">
           <span className="font-bold mr-1">Past:</span> Co-founder of{" "}
           <a
-            className="text-green-800 hover:font-extrabold cursor-pointer"
+            className="text-green-800 hover:font-extrabold cursor-pointer dark:text-green-400"
             href="https://tryarcher.io"
           >
             Archer
@@ -40,7 +47,7 @@ export default function Home() {
         </p>
         <p className="text-lg">
           <span className="font-bold mr-1">Future:</span>Open to{" "}
-          <a className="text-blue-800 cursor-pointer hover:font-extrabold">
+          <a className="text-blue-800 cursor-pointer hover:font-extrabold dark:text-blue-400">
             software consulting
           </a>{" "}
           and new opportunities.{" "}
@@ -50,7 +57,7 @@ export default function Home() {
             return (
               <div
                 key={i}
-                className="rounded-sm mr-2 my-2 p-1 border border-black hover:bg-black hover:text-white duration-75 transition ease-in cursor-pointer"
+                className="rounded-sm mr-2 my-2 p-1 border dark:bg-white dark:text-black dark:hover:bg-gray-300 border-black hover:bg-black hover:text-white duration-75 transition ease-in cursor-pointer"
               >
                 {nav.hidden ? (
                   <TooltipProvider>
