@@ -1,3 +1,4 @@
+import Coffee from "@/components/Coffee";
 import Name from "@/components/Name";
 import {
   Tooltip,
@@ -27,8 +28,8 @@ export default function Home() {
         </div>
         <p className="text-lg">
           Welcome to my corner of the internet. Help yourself to a{" "}
-          <span className="text-orange-900 hover:font-extrabold cursor-pointer dark:text-orange-400">
-            coffee.
+          <span className="font-serif">
+            <Coffee />
           </span>
         </p>
         <p className="text-lg">

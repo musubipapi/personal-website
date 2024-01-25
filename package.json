@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-three/drei": "^9.96.4",
     "@react-three/fiber": "^8.15.14",
     "@types/three": "^0.160.0",
     "class-variance-authority": "^0.7.0",
@@ -21,7 +25,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.160.1"
+    "three": "^0.160.1",
+    "vaul": "^0.8.9"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,14 +1,5 @@
 "use client";
-import { useThemeSwitcher } from "@/app/hooks/useThemeSwitcher";
-// const Name = () => {
-//   return (
-//     <p className="mt-8 text-4xl">
-//       Andy Ga<span onMouseOver={}>o</span>.
-//     </p>
-//   );
-// };
-
-// export default Name;
+import { useThemeSwitcher } from "@/hooks/useThemeSwitcher";
 
 import { motion } from "framer-motion";
 
