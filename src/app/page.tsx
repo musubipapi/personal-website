@@ -1,80 +1,65 @@
-import Coffee from "@/components/Coffee";
-import Name from "@/components/Name";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-const Navigation = [
-  // { title: "Projects", link: "/", hidden: true },
-  { title: "Thoughts", link: "/", hidden: true },
-  { title: "Github", link: "https://github.com/musubipapi" },
-  { title: "Instagram", link: "https://instagram.com/iforgottocooktherice" },
-  { title: "Twitter/X", link: "https://twitter.com/andy_gao_1" },
-];
+import { Dot, Play, Triangle } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container mx-auto lg:px-0 px-4 max-w-3xl font-serif">
-      <div>
-        <div className="mt-8 text-4xl flex">
-          Andy Ga
-          <div className="mt-[13.2px] ml-[0.75px]">
-            <Name />
+    <main className="w-full max-w-2xl mx-auto">
+      <div className="mt-8 font-semibold text-xl text-neutral-600">
+        Andy Gao
+      </div>
+      <div className="mt-4">
+        <div className="flex items-center bg-slate-200 border rounded-sm">
+          {/* @ts-ignore */}
+          <div className="flex items-center bg-green-300 rounded-sm p-1 text-sm">
+            <Play size={15} />
+            <div className=" ml-2 whitespace-nowrap">Now Playing</div>
           </div>
-          .
+          <div className="italic p-0 w-full flex items-center">
+            {/* @ts-ignore */}
+            <marquee className="w-full">
+              Traveling the world and wrangling with code.
+              {/* @ts-ignore */}
+            </marquee>
+          </div>
         </div>
-        <p className="text-lg">
-          Welcome to my corner of the internet. Help yourself to a{" "}
-          <span className="font-serif">
-            <Coffee />
-          </span>
-        </p>
-        <p className="text-lg">
-          <span className="font-bold mr-1">Past:</span> Co-founder of{" "}
-          <a
-            className="text-green-800 hover:font-extrabold cursor-pointer dark:text-green-400"
-            href="https://tryarcher.io"
-          >
-            Archer
-          </a>
-          .
-        </p>
-        <p className="text-lg">
-          <span className="font-bold mr-1">Now:</span> Taking a smol break and
-          building things for fun.
-        </p>
-        <p className="text-lg">
-          <span className="font-bold mr-1">Future:</span>Open to{" "}
-          <a className="text-blue-800 cursor-pointer hover:font-extrabold dark:text-blue-400">
-            software consulting
-          </a>{" "}
-          and new opportunities.{" "}
-        </p>
-        <div className="flex flex-wrap mt-4">
-          {Navigation.map((nav, i) => {
-            return (
-              <div
-                key={i}
-                className="rounded-sm mr-2 my-2 p-1 border dark:bg-white dark:text-black dark:hover:bg-gray-300 border-black hover:bg-black hover:text-white duration-75 transition ease-in cursor-pointer"
-              >
-                {nav.hidden ? (
-                  <TooltipProvider>
-                    <Tooltip delayDuration={100}>
-                      <TooltipTrigger>{nav.title}</TooltipTrigger>
-                      <TooltipContent className="mb-2">
-                        <p className="font-serif">Coming soon</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                ) : (
-                  <a href={nav.link}>{nav.title}</a>
-                )}
+        <br />
+        <div>
+          <p>
+            In a former life, I was a{" "}
+            <Link
+              href="https://tryarcher.io"
+              className="text-blue-400 cursor-pointer hover:text-blue-500"
+            >
+              startup founder
+            </Link>{" "}
+            working on bringing AI to the owners of small businesses.
+          </p>
+          <br />
+          <p>
+            {`These days I'm tinkering on some personal projects and building out my`}{" "}
+            <a className="text-blue-400 cursor-pointer hover:text-blue-500">
+              software studio
+            </a>
+            {`. If you need help building something, please feel free to reach out!`}
+          </p>
+        </div>
+        <div className="border-t border-neutral-200 my-4" />
+        <div className="grid grid-cols-4 gap-4">
+          <div className="col-span-4">
+            <div className="mb-2">{`Thoughts I'm pondering`}</div>
+            <div className="">
+              <div className="flex">
+                <Dot />
+                <a className="text-blue-500 cursor-pointer">
+                  Reflections on building a startup
+                </a>
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          <div className="rounded-md col-span-2">
+            <div>{`Music I'm listening to`}</div>
+          </div>
         </div>
       </div>
     </main>
