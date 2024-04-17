@@ -1,7 +1,12 @@
-import { Dot, Play, Triangle } from "lucide-react";
+import { Dot, Play } from "lucide-react";
 import Link from "next/link";
+import { client } from "@/sanity/lib/client";
+import { SanityDocument } from "sanity";
+import { Post, GetAllPosts } from "@/sanity/queries";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await client.fetch<Post[]>(GetAllPosts);
+
   return (
     <main className="w-full max-w-2xl mx-auto">
       <div className="mt-8 font-semibold text-xl text-neutral-600">
@@ -12,7 +17,7 @@ export default function Home() {
           {/* @ts-ignore */}
           <div className="flex items-center bg-green-300 rounded-sm p-1 text-sm">
             <Play size={15} />
-            <div className=" ml-2 whitespace-nowrap">Now Playing</div>
+            <div className=" mx-2 whitespace-nowrap">Now Playing</div>
           </div>
           <div className="italic p-0 w-full flex items-center">
             {/* @ts-ignore */}
@@ -48,12 +53,20 @@ export default function Home() {
           <div className="col-span-4">
             <div className="mb-2">{`Thoughts I'm pondering`}</div>
             <div className="">
-              <div className="flex">
-                <Dot />
-                <a className="text-blue-500 cursor-pointer">
-                  Reflections on building a startup
-                </a>
-              </div>
+              {posts?.length == 0 && (
+                <div className="text-neutral-300">No thoughts yet</div>
+              )}
+              {posts?.map((post) => (
+                <div key={post._id} className="flex">
+                  <Dot />
+                  <Link
+                    href={`/${post.slug}`}
+                    className="text-blue-500 cursor-pointer"
+                  >
+                    {post.title}
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
 
