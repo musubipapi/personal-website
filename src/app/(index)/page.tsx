@@ -8,7 +8,7 @@ export default async function Home() {
   const posts = await client.fetch<Post[]>(GetAllPosts);
 
   return (
-    <main className="w-full max-w-2xl mx-auto">
+    <main className="w-full max-w-2xl mx-auto px-4 md:px-0">
       <div className="mt-8 font-semibold text-xl text-neutral-600">
         Andy Gao
       </div>
@@ -70,9 +70,9 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="rounded-md col-span-2">
+          {/* <div className="rounded-md col-span-2">
             <div>{`Music I'm listening to`}</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </main>
