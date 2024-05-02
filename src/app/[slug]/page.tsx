@@ -54,7 +54,6 @@ export default async function Page({ params }: Props) {
       query: settingsQuery,
     }),
   ]);
-  console.log(post);
   return (
     <main className="w-full max-w-2xl mx-auto mt-8">
       <div className="text-gray-400 font-light underline cursor-pointer">
