@@ -42,7 +42,10 @@ export default async function Home() {
           <br />
           <p>
             {`These days I'm tinkering on some personal projects and building out my`}{" "}
-            <a className="text-blue-400 cursor-pointer hover:text-blue-500">
+            <a
+              className="text-blue-400 cursor-pointer hover:text-blue-500"
+              href="https://singularitystudio.co"
+            >
               software studio
             </a>
             {`. If you need help building something, please feel free to reach out!`}
