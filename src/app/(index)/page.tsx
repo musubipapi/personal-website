@@ -54,7 +54,7 @@ export default async function Home() {
         <div className="border-t border-neutral-200 my-4" />
         <div className="grid grid-cols-4 gap-4">
           <div className="col-span-4">
-            <div className="mb-2">{`Thoughts I'm pondering`}</div>
+            <div className="mb-2">{`Notes`}</div>
             <div className="">
               {posts?.length == 0 && (
                 <div className="text-neutral-300">No thoughts yet</div>
