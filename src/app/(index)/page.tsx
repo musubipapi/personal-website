@@ -13,21 +13,6 @@ export default async function Home() {
         Andy Gao
       </div>
       <div className="mt-4">
-        <div className="flex items-center bg-slate-200 border rounded-sm">
-          {/* @ts-ignore */}
-          <div className="flex items-center bg-green-300 rounded-sm p-1 text-sm">
-            <Play size={15} />
-            <div className=" mx-2 whitespace-nowrap">Now Playing</div>
-          </div>
-          <div className="italic p-0 w-full flex items-center">
-            {/* @ts-ignore */}
-            <marquee className="w-full">
-              Traveling the world and wrangling with code.
-              {/* @ts-ignore */}
-            </marquee>
-          </div>
-        </div>
-        <br />
         <div>
           <p>
             In a former life, I was a{" "}
