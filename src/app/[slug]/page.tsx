@@ -57,7 +57,7 @@ export default async function Page({ params }: Props) {
   ]);
   return (
     <main className="w-full max-w-2xl mx-auto mt-8 px-4 md:px-0">
-      <div className="text-gray-400 font-light underline cursor-pointer">
+      <div className="text-gray-400 font-light underline cursor-pointer mb-4">
         <Link href="/">Back</Link>
       </div>
       <div className="font-bold text-2xl">{post?.title}</div>
